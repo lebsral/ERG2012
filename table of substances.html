@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
+     <!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
 <!-- DataTables CSS -->
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
  
@@ -20,7 +23,24 @@
 
     <script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#example').dataTable();
+				$('#example').dataTable({
+					"sDom": "<'row'<'span8'l><'span8'f>r>t<'row'<'span8'i><'span8'p>>",
+					"sPaginationType": "bootstrap",
+        			"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 0 ] },
+        				{"bSearchable": false, "bVisible": true, "aTargets": [ 5 ] },
+        				{"bSearchable": false, "bVisible": true, "aTargets": [ 4 ] }
+        				],
+			    });
+
+			    $.extend( $.fn.dataTableExt.oStdClasses, {
+				"sSortAsc": "header headerSortDown",
+				"sSortDesc": "header headerSortUp",
+				"sSortable": "header"
+			} );
+
+
+
+
 			} );
 		</script>
 
@@ -34,9 +54,9 @@
 
  <TR>
  <TH>id</TH>
-<TH>Name of Material</TH>
+<TH style="background-color: Blue;">Name of Material</TH>
 <TH>Guide No</TH>
-<TH>ID No</TH>
+<TH style="background-color: Yellow;">ID No</TH>
 <TH>Polymerization hazard</TH>
 <TH>Highlighted TIH</TH>
 </TR>
@@ -231,6 +251,15 @@
 
  </tbody>
 </TABLE>
+
+
+
+
+
+
+
+ <script src="js/bootstrap.min.js"></script>
+
 
   </body>
 </html>
