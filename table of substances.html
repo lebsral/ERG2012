@@ -118,20 +118,31 @@
 			/* Table initialisation */
 			$(document).ready(function() {
 				$('#example').dataTable( {
+						"fnRowCallback": function( nRow, aData, iDisplayIndex ) {
+							if ( aData[5] == "1" )
+								{
+								$(nRow).css({ 'background-color' : 'green'});
+								};
+					
+							if ( aData[4] == "1" )
+								{
+								$('td:eq(3)', nRow).html( '<b><a href="./glossary.html">P</a></b>' );
+								};
+
+							if ( aData[4] == "0" )
+								{
+								$('td:eq(3)', nRow).html( ' ' );
+								}
+								return nRow;
+							},
+
 					"sDom": "<'row'<'span8'l><'span8'f>r>t<'row'<'span8'i><'span8'p>>",
 					"bStateSave": true,
 					"sPaginationType": "bootstrap",
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 0 ] },
-        				{"bSearchable": false, "bVisible": true, "aTargets": [ 5 ] },
+        				{"bSearchable": false, "bVisible": false, "aTargets": [ 5 ] },
         				{"bSearchable": false, "bVisible": true, "aTargets": [ 4 ] }
         				],
-        			"fnCreatedRow": function( nRow, aData, iDataIndex ) {
-        				if ( aData[5] == "1" ) {
-        					$(nRow).addClass('#3a87ad');
-        					return nRow;
-        				    }
-        			    }
-
 				} );
 			} );
 		</script>
