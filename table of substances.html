@@ -136,7 +136,7 @@
 								return nRow;
 							},
 
-					"sDom": "<'row'<'span8'l><'span8'f>r>t<'row'<'span8'i><'span8'p>>",
+					"sDom": "<'row'<'span16'f>r>t<'row'<'span8'i><'span8'l><'row'<'span8'p>>", 
 					"bStateSave": true,
 					"sPaginationType": "bootstrap",
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 0 ] },
@@ -153,7 +153,16 @@
 
   </head>
   <body>
+	 <div class="row-fluid">
 
+	 	<div class="span12">
+
+
+    <div class="alert alert-info">
+    alert info
+    </div>
+
+    
  <table id="example">
      <thead>
 
@@ -162,7 +171,7 @@
 <TH style="background-color: Blue;">Name of Material</TH>
 <TH>Guide No</TH>
 <TH style="background-color: Yellow;">ID No</TH>
-<TH>Polymerization hazard</TH>
+<TH> </TH>
 <TH>Highlighted TIH</TH>
 </TR>
 
@@ -360,7 +369,8 @@
 
 
 
-
+</div>
+</div>
 
 
  <script src="js/bootstrap.min.js"></script>
