@@ -1,0 +1,12 @@
+<TD>(?=\d\d\d</TD>)
+<TD><a href="./guide
+
+
+then do
+
+(?<=e\d\d\d)</TD>
+.html">guide</a></TD>
+
+
+
+regular expressions for setting up data  use find and replace
