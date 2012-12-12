@@ -15,10 +15,11 @@
 
 </tr>
 <tr>
-	<td>type</td>
-	<td>css=input[type=&quot;text&quot;]</td>
-	<td>oil</td>
+	<td>openWindow</td>
+	<td>ERG2012/table%20of%20substances.html</td>
+	<td>for test</td>
 </tr>
+<!--the next line does not cause a search to happen-->
 <tr>
 	<td>select</td>
 	<td>name=example_length</td>
@@ -26,8 +27,33 @@
 </tr>
 <tr>
 	<td>verifyTextPresent</td>
+	<td>Showing 1 to 25</td>
 	<td></td>
-	<td>Showing 1 to 26</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=example_length</td>
+	<td>label=10</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Showing 1 to 10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=input[type=&quot;text&quot;]</td>
+	<td>oil</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>oil</td>
+	<td>oil</td>
+</tr>
+<tr>
+	<td>close</td>
+	<td>ERG2012/table%20of%20substances.html</td>
+	<td>for test</td>
 </tr>
 </tbody></table>
 </body>
