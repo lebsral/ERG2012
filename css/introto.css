@@ -10,3 +10,13 @@ p.centerbold{
 	font-weight: bold;
 	font-size:20px;
 }
+
+p.centered{
+	text-align:center;
+}
+
+ol {list-style-type: none;}
+li.c:before {content: "(" counter(section) ") ";}
+li.c { counter-increment: section;}
+
+ul.a {list-style-type: circle;}
