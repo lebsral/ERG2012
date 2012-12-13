@@ -18,6 +18,10 @@
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
+
+
+<link rel="stylesheet" type="text/css" href="css/canada.css" />
+
 		<script type="text/javascript" charset="utf-8">
 			/* Default class modification */
 			$.extend( $.fn.dataTableExt.oStdClasses, {
@@ -117,16 +121,7 @@
 
 			/* Table initialisation */
 			$(document).ready(function() {
-				$('#example').dataTable( {
-						"fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-							if ( aData[5] == "1" )
-								{
-								$(nRow).css({ 'background-color' : 'green'});
-								$(nRow).click;
-								};
-					
-								return nRow;
-							},
+				$('#example2').dataTable( {
 
 					"sDom": "<'row'<f>r>  <'row'<t>> <'row'<i>> <'row'<l>>  <'row'<p>>", 
 					"bStateSave": true,
@@ -162,12 +157,12 @@
  <table id="example">
 	<thead>
 			<tr>
-				<th class="align-left" scope="col">
+				<th  style="background-color: #79BDE8" class="align-left" scope="col">
                                 <span id="lblNameMaterialHeader" title="Name of Material">Name of Material</span>
                             </th><th class="align-center" scope="col">
                                 <span id="lblGuideHeader" title="Guide Number">Guide No.</span>
                             </th><th class="align-center" scope="col">
-                                <span id="lblIDNumHeader" title="Identification Number">ID No.</span>
+                                <span style="background-color: #FFF203" id="lblIDNumHeader" title="Identification Number">ID No.</span>
                             </th><th class="align-center" scope="col">
                                 <span id="lblWRMHeader" title="Water Reactive Material">WRM</span>
                             </th><th class="align-center" scope="col">
