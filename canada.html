@@ -125,19 +125,10 @@
 								$(nRow).click;
 								};
 					
-							if ( aData[4] == "1" )
-								{
-								$('td:eq(3)', nRow).html( '<b><a href="./glossary.html">P</a></b>' );
-								};
-
-							if ( aData[4] == "0" )
-								{
-								$('td:eq(3)', nRow).html( ' ' );
-								}
 								return nRow;
 							},
 
-					"sDom": "<'row'<'span16'f>r><'row'<'span16't><'row'<'span8'i><'span8'l><'row'<'span8'p>", 
+					"sDom": "<'row'<f>r>  <'row'<t>> <'row'<i>> <'row'<l>>  <'row'<p>>", 
 					"bStateSave": true,
 					"sPaginationType": "bootstrap",
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] },
