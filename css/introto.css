@@ -20,3 +20,8 @@ li.c:before {content: "(" counter(section) ") ";}
 li.c { counter-increment: section;}
 
 ul.a {list-style-type: circle;}
+
+h2 {
+	background-color: black;
+	color: white;
+}
