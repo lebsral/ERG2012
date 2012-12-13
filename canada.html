@@ -137,11 +137,12 @@
 								return nRow;
 							},
 
-					"sDom": "<'row'<'span16'f>r>t<'row'<'span8'i><'span8'l><'row'<'span8'p>>", 
+					"sDom": "<'row'<'span16'f>r><'row'<'span16't><'row'<'span8'i><'span8'l><'row'<'span8'p>", 
 					"bStateSave": true,
 					"sPaginationType": "bootstrap",
-					"aoColumnDefs": [{"bSearchable": true, "bVisible": true, "aTargets": [ 5 ] },
-        				{"bSearchable": true, "bVisible": true, "aTargets": [ 4 ] }
+					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] },
+						{"bSearchable": false, "bVisible": false, "aTargets": [ 5 ] },
+        				{"bSearchable": false, "bVisible": false, "aTargets": [ 4 ] }
         				],
 				} );
 
