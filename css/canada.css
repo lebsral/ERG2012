@@ -9,8 +9,17 @@
 .align-center  {text-align:center;
 }
 
+
+
 .tihgreen
 {background-color: #8DC63F}
+
+
+.HLyellow {background: #ffff99; 
+color: #000000;}
+
+.HLblue  {background: #649DC0; 
+color: #000000;}
 
 
  /* ---- Basic grid ---- */
