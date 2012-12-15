@@ -13,3 +13,11 @@ TODO insert IED table from page 372
 TODO insert glossary
 
 TODO page 386 onward is not formatted right
+
+make icons
+
+table of placards: first line is missing words  maybe "name"????
+
+<a href="tel:+1-800-275-2273">
+Call Apple Customer Support at 1-800-275-2273
+</a>
