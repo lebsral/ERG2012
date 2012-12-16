@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+		     <!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		
 <!-- DataTables CSS -->
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
@@ -13,130 +17,272 @@
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
 
-
+<link rel="stylesheet" type="text/css" href="css/datatablebootstrap.css" />
 
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#example').dataTable( {
-					"sScrollY": "200px",
+				$('#iedtnt').dataTable( {
+					"sDom": '<"top">t<"bottom"><"clear">',
 					"bPaginate": false,
+					"bStateSave": true,
+					"bSort" : false,
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 1 ] },
 						{"bSearchable": false, "bVisible": false, "aTargets": [ 2 ] },
         				{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] }
         				]
 				} );
+
+				$('#iedlpg').dataTable( {
+					"sDom": '<"top">t<"bottom"><"clear">',
+					"bPaginate": false,
+					"bStateSave": true,
+					"bSort" : false,
+					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 1 ] },
+						{"bSearchable": false, "bVisible": false, "aTargets": [ 2 ] },
+        				{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] }
+        				]
+				} );
+
+
+
+
+
 			} );
 			
 			function fnShowHide( iCol )
 			{
 				/* Get the DataTables object again - this is not a recreation, just a get of the object */
-				var oTable = $('#example').dataTable();
+				var oTable = $('#iedtnt').dataTable();
+				
+				var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
+				oTable.fnSetColumnVis( iCol, bVis ? false : true );
+			}
+
+			function fnShowHide2( iCol )
+			{
+				/* Get the DataTables object again - this is not a recreation, just a get of the object */
+				var oTable = $('#iedlpg').dataTable();
 				
 				var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
 				oTable.fnSetColumnVis( iCol, bVis ? false : true );
 			}
 		</script>
+
+
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<link rel="stylesheet" type="text/css" href="css/canada.css" />
 	</head>
 
-
-
 	<body>
+			<a href="javascript:void(0);" onclick="fnShowHide(1),fnShowHide(2),fnShowHide(3),fnShowHide(4),fnShowHide(5),fnShowHide(6),fnShowHide2(1),fnShowHide2(2),fnShowHide2(3),fnShowHide2(4),fnShowHide2(5),fnShowHide2(6);">Switch Units<br></a>
+	
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="iedtnt">
 	
 
-			
-			<a href="javascript:void(0);" onclick="fnShowHide(1),fnShowHide(2),fnShowHide(3),fnShowHide(4),fnShowHide(5),fnShowHide(6);">Switch Units<br></a>
-
-			<h1>Live example</h1>
-			<div id="demo">
-<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
 	<thead>
 		<tr>
-			<th></th>
+            
 			<th>Threat Description</th>
-			<th>Explosives Mass (TNT equivalent)1</th>
-			<th>Building Evacuation Distance 2</th>
-			<th>Outdoor Evacuation Distance 3</th>
-
-			<th>Explosives Mass (TNT equivalent)1</th>
-			<th>Building Evacuation Distance 2</th>
-			<th>Outdoor Evacuation Distance 3</th>
+			<th>Explosives Mass (TNT equivalent)<a class="footnote" href="#fn1"><sup>1</sup></a></th>
+			<th>Building Evacuation Distance <a class="footnote" href="#fn2"><sup>2</sup></a></th>
+			<th>Outdoor Evacuation Distance <a class="footnote" href="#fn3"><sup>3</sup></a></th>
+			<th>Explosives Mass (TNT equivalent)<a class="footnote" href="#fn1"><sup>1</sup></a></th>
+			<th>Building Evacuation Distance <a class="footnote" href="#fn2"><sup>2</sup></a></th>
+			<th>Outdoor Evacuation Distance <a class="footnote" href="#fn3"><sup>3</sup></a></th>
 
 		</tr>
 	</thead>
+
 	<tbody>
-
-
-
        <tr>
-            <th id="tnt" class="tihnight" rowspan="11">High <br />Explosives <br />(TNT <br /> Equivalent)</th>
+            
             <th id="pipe" class="align-center">Pipe Bomb</th>
             <td class="align-center background-light" headers="tnt pipe">5 lbs</td>
             <td class="align-center" headers="tnt pipe">70 ft</td>
             <td class="align-center background-light" headers="tnt pipe">850 ft</td>
+            <td class="align-center background-light" headers="tnt pipe">2.3 kg</td>
+            <td class="align-center" headers="tnt pipe">21 m</td>
+            <td class="align-center background-light" headers="tnt pipe">259 m</td>
         </tr>
         <tr>
+        	
             <th id="belt" class="align-center">Suicide Belt</th>
             <td class="align-center background-light" headers="tnt belt">10 lbs</td>
             <td class="align-center" headers="tnt belt">90 ft</td>
             <td class="align-center background-light" headers="tnt belt">1,080 ft</td>
+            <td class="align-center background-light" headers="tnt belt">4.5 kg</td>
+            <td class="align-center" headers="tnt belt">27 m</td>
+            <td class="align-center background-light" headers="tnt belt">330 m</td>
         </tr>
         <tr>
+        	
             <th id="vest" class="align-center">Suicide Vest</th>
             <td class="align-center background-light" headers="tnt vest">20 lbs</td>
             <td class="align-center" headers="tnt vest">110 ft</td>
             <td class="align-center background-light" headers="tnt vest">1,360 ft</td>
+            <td class="align-center background-light" headers="tnt vest">9 kg</td>
+            <td class="align-center" headers="tnt vest">34 m</td>
+            <td class="align-center background-light" headers="tnt vest">415 m</td>
         </tr>
         <tr>
+        	
             <th id="suitcase" class="align-center">Briefcase/Suitcase <br />Bomb</th>
             <td class="align-center background-light" headers="tnt suitcase">50 lbs</td>
             <td class="align-center" headers="tnt suitcase">150 ft</td>
             <td class="align-center background-light" headers="tnt suitcase">1,850 ft</td>
+            <td class="align-center background-light" headers="tnt suitcase">23 kg</td>
+            <td class="align-center" headers="tnt suitcase">46 m</td>
+            <td class="align-center background-light" headers="tnt suitcase">564 m</td>
         </tr>
         <tr>
+        	
             <th id="compact" class="align-center">Compact Sedan</th>
             <td class="align-center background-light" headers="tnt compact">500 lbs</td>
             <td class="align-center" headers="tnt compact">320 ft</td>
             <td class="align-center background-light" headers="tnt compact">1,500 ft</td>
+            <td class="align-center background-light" headers="tnt compact">227 kg</td>
+            <td class="align-center" headers="tnt compact">98 m</td>
+            <td class="align-center background-light" headers="tnt compact">457 m</td>
         </tr>
         <tr>
+        	
             <th id="sedan" class="align-center">Sedan</th>
             <td class="align-center background-light" headers="tnt sedan">1,000 lbs</td>
             <td class="align-center" headers="tnt sedan">400 ft</td>
             <td class="align-center background-light" headers="tnt sedan">1,750 ft</td>
+            <td class="align-center background-light" headers="tnt sedan">454 kg</td>
+            <td class="align-center" headers="tnt sedan">122 m</td>
+            <td class="align-center background-light" headers="tnt sedan">534 m</td>
         </tr>
         <tr>
+        	
             <th id="cargo" class="align-center">Passenger/Cargo <br />Van</th>
             <td class="align-center background-light" headers="tnt cargo">4,000 lbs</td>
             <td class="align-center" headers="tnt cargo">640 ft</td>
             <td class="align-center background-light" headers="tnt cargo">2,750 ft</td>
+            <td class="align-center background-light" headers="tnt cargo">1 814 kg</td>
+            <td class="align-center" headers="tnt cargo">195 m</td>
+            <td class="align-center background-light" headers="tnt cargo">838 m</td>
         </tr>
         <tr>
+        	
             <th id="moving" class="align-center">Small Moving Van/<br />Delivery Truck</th>
             <td class="align-center background-light" headers="tnt moving">10,000 lbs</td>
             <td class="align-center" headers="tnt moving">860 ft</td>
             <td class="align-center background-light" headers="tnt moving">3,750 ft</td>
+            <td class="align-center background-light" headers="tnt moving">4 536 kg</td>
+            <td class="align-center" headers="tnt moving">263 m</td>
+            <td class="align-center background-light" headers="tnt moving">1 143 m</td>
         </tr>
         <tr>
+        	
             <th id="van" class="align-center">Moving Van/<br />Water Truck</th>
             <td class="align-center background-light" headers="tnt van">30,000 lbs</td>
             <td class="align-center" headers="tnt van">1,240 ft</td>
             <td class="align-center background-light" headers="tnt van">6,500 ft</td>
+            <td class="align-center background-light" headers="tnt van">13 608 kg</td>
+            <td class="align-center" headers="tnt van">375 m</td>
+            <td class="align-center background-light" headers="tnt van">1 982 m</td>
         </tr>
         <tr>
+        	
             <th id="semi" class="align-center">Semitrailer</th>
             <td class="align-center background-light" headers="tnt semi">60,000 lbs</td>
             <td class="align-center" headers="tnt semi">1,570 ft</td>
             <td class="align-center background-light" headers="tnt semi">7,000 ft</td>
-
-
-
-
-
-
+            <td class="align-center background-light" headers="tnt semi">27 216 kg</td>
+            <td class="align-center" headers="tnt semi">475 m</td>
+            <td class="align-center background-light" headers="tnt semi">2 134 m</td>
 
 	</tbody>
 
 </table>
-	
+
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="iedlpg">
+<thead>
+	    <tr>
+            
+            <th>Threat Description</th>
+            <th>LPG Mass/ Volume <a class="footnote" href="#fn1"><sup>1</sup></a></th>
+            <th>Fireball Diameter <a class="footnote" href="#fn4"><sup>4</sup></a></th>
+            <th>Safe Distance <a class="footnote" href="#fn5"><sup>5</sup></a></th>
+            <th>LPG Mass/ Volume <a class="footnote" href="#fn1"><sup>1</sup></a></th>
+            <th>Fireball Diameter <a class="footnote" href="#fn4"><sup>4</sup></a></th>
+            <th>Safe Distance <a class="footnote" href="#fn5"><sup>5</sup></a></th>
+		</tr>
+	</thead>
+
+ <tbody>
+        <tr>
+            
+            <th id="small" class="align-center">Small LPG Tank</th>
+            <td class="align-center background-light" headers="prop1 small">20 lbs/5 gal</td>
+            <td class="align-center" headers="prop1 small">40 ft</td>
+            <td class="align-center background-light" headers="prop1 small">160 ft</td>
+            <td class="align-center background-light" headers="prop1 small">9 kg/19 L</td>
+            <td class="align-center" headers="prop1 small">12 m</td>
+            <td class="align-center background-light" headers="prop1 small">48 m</td>
+        </tr>
+        <tr>
+        	
+            <th id="large" class="align-center">Large LPG Tank</th>
+            <td class="align-center background-light" headers="prop1 large">100 lbs/25 gal</td>
+            <td class="align-center" headers="prop1 large">69 ft</td>
+            <td class="align-center background-light" headers="prop1 large">276 ft</td>
+            <td class="align-center background-light" headers="prop1 large">45 kg/95 L</td>
+            <td class="align-center" headers="prop1 large">21 m</td>
+            <td class="align-center background-light" headers="prop1 large">84 m</td>
+        </tr>
+        <tr>
+        	
+            <th id="commercial" class="align-center">Commercial/ Residential LPG Tank</th>
+            <td class="align-center background-light" headers="prop1 commercial">2,000 lbs/500 gal</td>
+            <td class="align-center" headers="prop1 commercial">184 ft</td>
+            <td class="align-center background-light" headers="prop1 commercial">736 ft</td>
+            <td class="align-center background-light" headers="prop1 commercial">907 kg/1 893 L</td>
+            <td class="align-center" headers="prop1 commercial">56 m</td>
+            <td class="align-center background-light" headers="prop1 commercial">224 m</td>
+        </tr>
+        <tr>
+        	
+            <th id="truck" class="align-center">Small LPG Truck</th>
+            <td class="align-center background-light" headers="prop1 truck">8,000 lbs/2,000 gal</td>
+            <td class="align-center" headers="prop1 truck">292 ft</td>
+            <td class="align-center background-light" headers="prop1 truck">1,168 ft</td>
+            <td class="align-center background-light" headers="prop1 truck">3 630 kg/7 570 L</td>
+            <td class="align-center" headers="prop1 truck">89 m</td>
+            <td class="align-center background-light" headers="prop1 truck">356 m</td>
+        </tr>
+        <tr>
+        	
+            <th id="propsemi" class="align-center">Semitanker  LPG</th>
+            <td class="align-center background-light" headers="prop1 propsemi">40,000 lbs/10,000 gal</td>
+            <td class="align-center" headers="prop1 propsemi">499 ft</td>
+            <td class="align-center background-light" headers="prop1 propsemi">1,996 ft</td>
+            <td class="align-center background-light" headers="prop1 propsemi">18 144 kg/37 850 L</td>
+            <td class="align-center" headers="prop1 propsemi">152 m</td>
+            <td class="align-center background-light" headers="prop1 propsemi">608 m</td>
+        </tr>
+    </tbody> 
+
+</table>
+
+
+
+
+
+<div class="footnote-container">
+	<p><a id="fn1"/> </a><sup>1</sup> <span class="footnote">Based on the maximum amount of material that could reasonably fit into a container or vehicle. Variations possible.</span></p>
+	<p><a id="fn2"/></a><sup>2</sup>  <span class="footnote">Governed by the ability of an unreinforced building to withstand severe damage or collapse.</span></p>
+    <p><a id="fn3"/></a><sup>3</sup>  <span class="footnote">Governed by the greater of fragment throw distance or glass breakage/falling glass hazard distance. These distances can be reduced for personnel wearing ballistic protection. Note that the pipe bomb, suicide belt/vest, and briefcase/suitcase bomb are assumed to have a fragmentation characteristic that requires greater standoff distances than an equal amount of explosives in a vehicle.</span></p>
+    <p><a id="fn4"/></a><sup>4</sup>  <span class="footnote">Assuming efficient mixing of the flammable gas with ambient air.</span></p>
+    <p><a id="fn5"/></a><sup>5</sup>  <span class="footnote">Determined by U.S. firefighting practices wherein safe distances are approximately 4 times the flame height. Note that an LPG tank filled with high explosives would require a significantly greater standoff distance than if it were filled with LPG.</span></p>
+</div>
+
+
+
+	 <script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
