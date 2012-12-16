@@ -18,6 +18,12 @@ make icons
 
 table of placards: first line is missing words  maybe "name"????
 
-<a href="tel:+1-800-275-2273">
-Call Apple Customer Support at 1-800-275-2273
-</a>
+Check to be sure BLEVE table is inserted correct
+
+
+
+page 120 of the guide?  Do we need this with the web version??
+
+
+skipped table 1 green
+at page 344
