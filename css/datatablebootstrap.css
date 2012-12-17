@@ -26,3 +26,31 @@ table {
     margin: 1em 0;
     clear: both;
 }
+
+p.firstunderline {
+    text-align:center;
+    text-decoration:underline;
+    font-weight: bold;
+    font-size:24px;
+}
+
+p.centerbold{
+    text-align:center;
+    font-weight: bold;
+    font-size:20px;
+}
+
+p.centered{
+    text-align:center;
+}
+
+ol {list-style-type: none;}
+li.c:before {content: "(" counter(section) ") ";}
+li.c { counter-increment: section;}
+
+ul.a {list-style-type: circle;}
+
+h2 {
+    background-color: black;
+    color: white;
+}
