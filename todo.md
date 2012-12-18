@@ -10,8 +10,6 @@ TODO insert IED table from page 372
 
 
 
-TODO insert glossary
-
 TODO page 386 onward is not formatted right
 
 make icons
@@ -27,3 +25,5 @@ page 120 of the guide?  Do we need this with the web version??
 
 skipped table 1 green
 at page 344
+
+make keyword in glossary bold
