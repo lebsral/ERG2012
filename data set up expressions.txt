@@ -76,4 +76,20 @@ which becomes:
 
 
 
+
+
+find:
+"/saf-sec-sur/3/erg-gmu/erg/guidepage.aspx/([^>]*)/id([^>]*)">([^>]*)</a>
+
+example:
+"/saf-sec-sur/3/erg-gmu/erg/guidepage.aspx/guide131/id2911">Petroleum sour crude oil, flammable, toxic</a>
+
+replace with
+"./\1.html?id=\2">\3</a>
+
+
+
+
+
+
 regular expressions for setting up data  use find and replace
