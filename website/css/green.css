@@ -1,0 +1,12 @@
+body {
+	border-style:solid;
+	border-width:thick;
+	border-color: #8DC63F; 
+}
+
+
+ol {list-style-type: none;}
+li.c:before {content: "(" counter(section) ") ";}
+li.c { counter-increment: section;}
+
+ul.a {list-style-type: circle;}
