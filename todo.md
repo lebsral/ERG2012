@@ -18,3 +18,8 @@ page 120 of the guide?  Do we need this with the web version??
 todo table1 move into the guides based on the substance
 
 make keyword in glossary bold
+
+
+do we need to be pulling from
+http://ajax.aspnetcdn.com/ajax/jquery.dataTables
+ect?  each time?  should these be stored local in the cache manifest?
