@@ -74,6 +74,7 @@ which becomes:
 
 
 
+For table 1...
 
 
 
@@ -87,6 +88,20 @@ example:
 replace with
 "./\1.html?id=\2">\3</a>
 
+
+
+
+
+find:
+"/saf-sec-sur/3/erg-gmu/erg/guidepage.aspx/guide([^>]*)/id([^>]*)">([^>]*) <b>([^>]*)</b></a>
+
+
+example:
+<a href="/saf-sec-sur/3/erg-gmu/erg/guidepage.aspx/guide153/id2010">L (Lewisite) <b>(when used as a weapon)</b></a>
+
+
+replace with:
+"./guide\1.html?id=\2">\3 <b>\4</b></a>
 
 
 

@@ -1,13 +1,6 @@
 todo
 
 
-in erg2012 it lists pages to refer to 285 to 291.  make those href instead of page numbers 
-
-indenting with blockquotes does not loook right
-
-
-TODO insert IED table from page 372
-
 
 
 TODO page 386 onward is not formatted right
@@ -22,8 +15,6 @@ Check to be sure BLEVE table is inserted correct
 
 page 120 of the guide?  Do we need this with the web version??
 
-
-skipped table 1 green
-at page 344
+todo table1 move into the guides based on the substance
 
 make keyword in glossary bold
