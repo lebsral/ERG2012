@@ -3,7 +3,6 @@ CACHE MANIFEST
 # Version: 1.01
 
 CACHE:
-css/bootstrap.css
 css/bootstrap.min.css
 css/canada.css
 css/datatablebootstrap.css
@@ -158,7 +157,6 @@ img/waterold.gif
 index.html
 introductiontothetableofplacards.html
 introtogreentables.html
-js/bootstrap.js
 js/bootstrap.min.js
 liquidspipelines.html
 notificationandrequest.html
