@@ -19,6 +19,7 @@ todo table1 move into the guides based on the substance
 
 make keyword in glossary bold
 
+<<<<<<< HEAD
 
 do we need to be pulling from
 http://ajax.aspnetcdn.com/ajax/jquery.dataTables
@@ -63,3 +64,5 @@ class="uppercase">Isolate  shows in 2nd table of green
 protect in green table link needs to got to a definition
 
  ergusersguide  phone numbers and emails need to be linked
+=======
+>>>>>>> updated todo
