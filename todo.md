@@ -33,6 +33,16 @@ moustache in the menu
 
 too much white space under collapsed version 111 of potential hazards in each guide
 
+Guide 113 menu buttons for collapse don't work
+ guide 114 make the supplemental information have a drop down collapse
+ 
+ guide 117 over health there is an extra >
+ mising section in guide 121
+ 
+ guide 135 drop down on potential hazards does not reaveal
+ 
+ 
+
 
 isolate link in green table needs to go to something specfic instead of just to top of glossarry
 
