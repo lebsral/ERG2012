@@ -46,7 +46,11 @@ potential hazard tin guide 136 missing
 
 guide 137 missing fire?
 
+guide 159 extra white space on top
 
+GUIE 59 seems to repeat in the menu
+
+guide 171 extra thing > at top of page
 
 isolate link in green table needs to go to something specfic instead of just to top of glossarry
 
@@ -54,4 +58,4 @@ class="uppercase">Isolate  shows in 2nd table of green
 
 protect in green table link needs to got to a definition
 
-ergusersguide  phone numbers and emails need to be linked
+ ergusersguide  phone numbers and emails need to be linked
