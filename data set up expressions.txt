@@ -107,4 +107,20 @@ replace with:
 
 
 
+find:
+guide([^>]*)/poly.html\?id
+
+
+example:
+href="./guide153/poly.html?id
+
+
+
+replace with:
+href="./guide\1.html?
+
+
+
+
+
 regular expressions for setting up data  use find and replace
