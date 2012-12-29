@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html manifest="erg2012.manifest">
   <head>
   <!-- Home screen icons -->
@@ -16,9 +16,6 @@ f<!DOCTYPE html>
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" href="img/57icon.png"/>
     <link rel="apple-touch-startup-image" href="img/startupscreen.png" />
-
-
-
 
      <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -138,10 +135,9 @@ f<!DOCTYPE html>
 			/* Table initialisation */
 			$(document).ready(function() {
 				$('#example').dataTable( {
-
+                    "sPaginationType": "bootstrap",
 					"sDom": "<'row'<'span16'f>r>t<'row'<'span8'i><'span8'p><'row'<'span16'l>>", 
 					"bStateSave": true,
-					"sPaginationType": "bootstrap",
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] },
 						{"bSearchable": false, "bVisible": false, "aTargets": [ 5 ] },
         				{"bSearchable": false, "bVisible": false, "aTargets": [ 4 ] }

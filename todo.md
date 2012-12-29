@@ -25,7 +25,7 @@ do we need to be pulling from
 http://ajax.aspnetcdn.com/ajax/jquery.dataTables
 ect?  each time?  should these be stored local in the cache manifest?
 
-chemicals with poly in the name don't link right
+
 
 the numbers of pages at buttom of page ony shows the first 5
 
