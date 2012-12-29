@@ -27,33 +27,15 @@ ect?  each time?  should these be stored local in the cache manifest?
 
 
 
-the numbers of pages at buttom of page ony shows the first 5
-
-
 table on index page does not resize in Safari 4.1.3
 
-pipeline image not loading
 
 moustache in the menu
 
-too much white space under collapsed version 111 of potential hazards in each guide
 
-Guide 113 menu buttons for collapse don't work
- guide 114 make the supplemental information have a drop down collapse
- 
- guide 117 over health there is an extra >
- mising section in guide 121
- 
- guide 135 drop down on potential hazards does not reaveal
- 
- 
-potential hazard tin guide 136 missing
 
-guide 137 missing fire?
 
-guide 159 extra white space on top
 
-GUIE 59 seems to repeat in the menu
 
 guide 171 extra thing > at top of page
 
