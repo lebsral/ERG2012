@@ -3,4 +3,4 @@ ERG2012
 
 Emergency Response Guidebook 2012
 
-This is from the DOT.
+Original data is from the DOT.
