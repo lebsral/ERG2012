@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" manifest="erg2012.manifest">
+<html manifest="erg2012.manifest">
   <head>
-    <meta charset="utf-8">
-    <title>title</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <!-- Home screen icons -->
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+<!-- iPad -->
+<link rel="apple-touch-startup-image" href="starts/ipad-landscape.jpg" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+<link rel="apple-touch-startup-image" href="starts/ipad-portrait.jpg" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+<!-- iPhone (retina) -->
+<link rel="apple-touch-startup-image" href="starts/iphone-retina.jpg" media="screen and (max-device-width: 640px)" />
 
-
-
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>ERG 2012</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
-
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" href="47icon.png"/>
-
-
-
-
-
-    <link rel="apple-touch-startup-image" href="startup.png" />
-   
-
+    <link rel="apple-touch-icon" href="img/57icon.png"/>
+    <link rel="apple-touch-startup-image" href="img/startupscreen.png" />
 
      <!-- Bootstrap -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
 <!-- DataTables CSS -->
-<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
  
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/jquery-1.8.2.min.js"></script>
  
 <!-- DataTables -->
-<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
 
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/datatablebootstrap.css" />
 
 
 
@@ -139,10 +135,9 @@
 			/* Table initialisation */
 			$(document).ready(function() {
 				$('#example').dataTable( {
-
+                    "sPaginationType": "bootstrap",
 					"sDom": "<'row'<'span16'f>r>t<'row'<'span8'i><'span8'p><'row'<'span16'l>>", 
 					"bStateSave": true,
-					"sPaginationType": "bootstrap",
 					"aoColumnDefs": [{"bSearchable": false, "bVisible": false, "aTargets": [ 3 ] },
 						{"bSearchable": false, "bVisible": false, "aTargets": [ 5 ] },
         				{"bSearchable": false, "bVisible": false, "aTargets": [ 4 ] }
@@ -166,7 +161,7 @@
 
    <div  class="navbar">
     <div class="navbar-inner">
-    	<div class="container">
+        <div class="container">
      
     <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -175,12 +170,12 @@
     <span class="icon-bar"></span>
     </a>
      
-    				<!-- Be sure to leave the brand out there if you want it shown -->
-   				 <a class="brand" href="http://www.web-application-developer.com">ERG 2012</a>
+                    <!-- Be sure to leave the brand out there if you want it shown -->
+                 <a class="brand" href="http://www.web-application-developer.com">ERG 2012</a>
      
-    		<!-- Everything you want hidden at 940px or less, place within here -->
-   				 <div class="nav-collapse collapse">
-   			 <!-- .nav, .navbar-search, .navbar-form, etc -->
+            <!-- Everything you want hidden at 940px or less, place within here -->
+                 <div class="nav-collapse collapse">
+             <!-- .nav, .navbar-search, .navbar-form, etc -->
 
 
     <ul  class="nav">
@@ -190,16 +185,17 @@
     <b  class="caret"></b>
     </a>
     <ul  class="dropdown-menu">
-    	<li><a href="./shippingpapers.html">Shipping Papers</a></li>
-    	<li><a href="./howtousethisguidebook.html">How to use</a></li>
-    	<li><a href="./safetyprecautions.html">Safety Precautions</a></li>
-    	<li><a href="./notificationandrequest.html">Notifications</a></li>
-    	<li><a href="./hazardclassificationsystem.html">Hazard Classification</a></li>
-    	<li><a href="./introductiontothetableofplacards.html">Intro to Placards</a></li>
-    	<li><a href="./tableofplacards.html">Placards</a></li>
-    	<li><a href="./railcaridentification.html">Railcar ID</a></li>
-    	<li><a href="./roadtrailerid.html">Road Tralier ID</a></li>
-    	<li><a href="./hazardidintermodal.html">Intermodal Hazard ID</a></li>
+        <li><a href="./index.html">Substances</a></li>
+        <li><a href="./shippingpapers.html">Shipping Papers</a></li>
+        <li><a href="./howtousethisguidebook.html">How to use</a></li>
+        <li><a href="./safetyprecautions.html">Safety Precautions</a></li>
+        <li><a href="./notificationandrequest.html">Notifications</a></li>
+        <li><a href="./hazardclassificationsystem.html">Hazard Classification</a></li>
+        <li><a href="./introductiontothetableofplacards.html">Intro to Placards</a></li>
+        <li><a href="./tableofplacards.html">Placards</a></li>
+        <li><a href="./railcaridentification.html">Railcar ID</a></li>
+        <li><a href="./roadtrailerid.html">Road Tralier ID</a></li>
+        <li><a href="./hazardidintermodal.html">Intermodal Hazard ID</a></li>
 
     <li><a  href="./hazardnumbersonintermodal.html">Intermodal Numbers</a></li>
     <li><a href="./pipelinetransportation.html">Pipelines</a></li>
@@ -207,6 +203,7 @@
         <li><a href="./introtogreentables.html">Initial Isolation and Protection</a></li>
      <li><a href="./greenintro.html">Green Tables</a></li>
        <li><a href="./erg2012usersguide.html">Users Guide</a></li>
+       <li><a href="./table1.html">Green Table 1</a></li>
        <li><a href="./glossary.html">Glossary</a></li>
      
 
@@ -228,7 +225,7 @@
     <b  class="caret"></b>
     </a>
     <ul  class="dropdown-menu">
-    <li><a  href="./guide111.html">111</a></li>
+    <li><a href="./guide111.html">111</a></li>
     <li><a href="./guide112.html">112</a></li>
     <li><a href="./guide113.html">113</a></li>
     <li><a href="./guide114.html">114</a></li>
@@ -277,8 +274,6 @@
     <li><a href="./guide157.html">157</a></li>
     <li><a href="./guide158.html">158</a></li>
     <li><a href="./guide159.html">159</a></li>
-    <li><a href="./guide159.html">159</a></li>
-    <li><a href="./guide159.html">159</a></li>
     <li><a href="./guide160.html">160</a></li>
     <li><a href="./guide161.html">161</a></li>
     <li><a href="./guide162.html">162</a></li>
@@ -300,15 +295,12 @@
 
 
 
-    			</div>
+                </div>
      
-    	</div>
+        </div>
     </div>
    </div>
 
-
-
-    
  <table id="example">
 	<thead>
 			<tr>
@@ -380,17 +372,17 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Acrolein, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id139&mnid=mnid144">131P</a></td><td class="tihgreen align-center">1092</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id139"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="align-left">Acrolein dimer, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1777&mnid=mnid1932">129P</a></td><td class="align-center">2607</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrolein dimer, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1777&mnid=mnid1932">129P</a></td><td class="align-center">2607</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Acrylamide</td><td class="align-center"><a href="./guide153.html?id=id1300&mnid=mnid1414">153P</a></td><td class="align-center">2074</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrylamide</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1300&mnid=mnid1414">153P</a></td><td class="align-center">2074</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Acrylamide, solid</td><td class="align-center"><a href="./guide153.html?id=id1301&mnid=mnid1415">153P</a></td><td class="align-center">2074</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrylamide, solid</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1301&mnid=mnid1415">153P</a></td><td class="align-center">2074</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Acrylamide, solution</td><td class="align-center"><a href="./guide153.html?id=id2780&mnid=mnid3192">153P</a></td><td class="align-center">3426</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrylamide, solution</td><td class="align-center"><a href="./guide153.html?poly=y&id=id2780&mnid=mnid3192">153P</a></td><td class="align-center">3426</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Acrylic acid, stabilized</td><td class="align-center"><a href="./guide132.html?id=id1359&mnid=mnid1479">132P</a></td><td class="align-center">2218</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrylic acid, stabilized</td><td class="align-center"><a href="./guide132.html?poly=y&id=id1359&mnid=mnid1479">132P</a></td><td class="align-center">2218</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Acrylonitrile, stabilized</td><td class="align-center"><a href="./guide131.html?id=id140&mnid=mnid145">131P</a></td><td class="align-center">1093</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Acrylonitrile, stabilized</td><td class="align-center"><a href="./guide131.html?poly=y&id=id140&mnid=mnid145">131P</a></td><td class="align-center">1093</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">Adamsite</td><td class="tihgreen align-center"><a href="./guide154.html?id=id794&mnid=mnid846">154</a></td><td class="tihgreen align-center">1698</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html"><img class="image-actual" src="img/chemical.gif" alt="Chemical Warfare Agent image" title="Chemical Warfare Agent"/></a></td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
@@ -989,7 +981,7 @@
 			</tr><tr>
 				<td class="align-left">Bhusa, wet, damp or contaminated with oil</td><td class="align-center"><a href="./guide133.html?id=id363&mnid=mnid381">133</a></td><td class="align-center">1327</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Bicyclo[2.2.1]hepta-2,5-diene, stabilized</td><td class="align-center"><a href="./guide128.html?id=id1390&mnid=mnid1512">128P</a></td><td class="align-center">2251</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Bicyclo[2.2.1]hepta-2,5-diene, stabilized</td><td class="align-center"><a href="./guide128.html?poly=y&id=id1390&mnid=mnid1512">128P</a></td><td class="align-center">2251</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Biological agents</td><td class="align-center"><a href="./guide158.html?id=id2867&mnid=mnid3290">158</a></td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1137,9 +1129,9 @@
 			</tr><tr>
 				<td class="align-left">Brucine</td><td class="align-center"><a href="./guide152.html?id=id629&mnid=mnid671">152</a></td><td class="align-center">1570</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butadienes, stabilized</td><td class="align-center"><a href="./guide116.html?id=id13&mnid=mnid14">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butadienes, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id13&mnid=mnid14">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butadienes and hydrocarbon mixture, stabilized</td><td class="align-center"><a href="./guide116.html?id=id14&mnid=mnid15">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butadienes and hydrocarbon mixture, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id14&mnid=mnid15">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Butane</td><td class="align-center"><a href="./guide115.html?id=id15&mnid=mnid16">115</a></td><td class="align-center">1011</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1157,7 +1149,7 @@
 			</tr><tr>
 				<td class="align-left">Butyl acid phosphate</td><td class="align-center"><a href="./guide153.html?id=id831&mnid=mnid884">153</a></td><td class="align-center">1718</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butyl acrylates, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1500&mnid=mnid1630">129P</a></td><td class="align-center">2348</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butyl acrylates, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1500&mnid=mnid1630">129P</a></td><td class="align-center">2348</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">n-Butylamine</td><td class="align-center"><a href="./guide132.html?id=id161&mnid=mnid166">132</a></td><td class="align-center">1125</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1277,9 +1269,9 @@
 			</tr><tr>
 				<td class="align-left">Brucine</td><td class="align-center"><a href="./guide152.html?id=id629&mnid=mnid671">152</a></td><td class="align-center">1570</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butadienes, stabilized</td><td class="align-center"><a href="./guide116.html?id=id13&mnid=mnid14">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butadienes, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id13&mnid=mnid14">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butadienes and hydrocarbon mixture, stabilized</td><td class="align-center"><a href="./guide116.html?id=id14&mnid=mnid15">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butadienes and hydrocarbon mixture, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id14&mnid=mnid15">116P</a></td><td class="align-center">1010</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Butane</td><td class="align-center"><a href="./guide115.html?id=id15&mnid=mnid16">115</a></td><td class="align-center">1011</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1297,7 +1289,7 @@
 			</tr><tr>
 				<td class="align-left">Butyl acid phosphate</td><td class="align-center"><a href="./guide153.html?id=id831&mnid=mnid884">153</a></td><td class="align-center">1718</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butyl acrylates, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1500&mnid=mnid1630">129P</a></td><td class="align-center">2348</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butyl acrylates, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1500&mnid=mnid1630">129P</a></td><td class="align-center">2348</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">n-Butylamine</td><td class="align-center"><a href="./guide132.html?id=id161&mnid=mnid166">132</a></td><td class="align-center">1125</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1319,7 +1311,7 @@
 			</tr><tr>
 				<td class="align-left">Butylene</td><td class="align-center"><a href="./guide115.html?id=id110&mnid=mnid113">115</a></td><td class="align-center">1075</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">1,2-Butylene oxide, stabilized</td><td class="align-center"><a href="./guide127.html?id=id2251&mnid=mnid2518">127P</a></td><td class="align-center">3022</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">1,2-Butylene oxide, stabilized</td><td class="align-center"><a href="./guide127.html?poly=y&id=id2251&mnid=mnid2518">127P</a></td><td class="align-center">3022</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Butyl ethers</td><td class="align-center"><a href="./guide128.html?id=id181&mnid=mnid190">128</a></td><td class="align-center">1149</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1335,7 +1327,7 @@
 			</tr><tr>
 				<td class="align-left">Butyl mercaptan</td><td class="align-center"><a href="./guide130.html?id=id1499&mnid=mnid1629">130</a></td><td class="align-center">2347</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">n-Butyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?id=id1365&mnid=mnid1486">130P</a></td><td class="align-center">2227</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">n-Butyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1365&mnid=mnid1486">130P</a></td><td class="align-center">2227</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Butyl methyl ether</td><td class="align-center"><a href="./guide127.html?id=id1501&mnid=mnid1631">127</a></td><td class="align-center">2350</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1349,7 +1341,7 @@
 			</tr><tr>
 				<td class="align-left">5-tert-Butyl-2,4,6-trinitro-m-xylene</td><td class="align-center"><a href="./guide149.html?id=id2183&mnid=mnid2416">149</a></td><td class="align-center">2956</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Butyl vinyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?id=id1503&mnid=mnid1633">127P</a></td><td class="align-center">2352</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Butyl vinyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?poly=y&id=id1503&mnid=mnid1633">127P</a></td><td class="align-center">2352</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">1,4-Butynediol</td><td class="align-center"><a href="./guide153.html?id=id1875&mnid=mnid2036">153</a></td><td class="align-center">2716</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1503,7 +1495,7 @@
 			</tr><tr>
 				<td class="align-left">Carbon dioxide and Ethylene oxide mixture, with more than 9% but not more than 87% Ethylene oxide</td><td class="align-center"><a href="./guide115.html?id=id60&mnid=mnid62">115</a></td><td class="align-center">1041</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Carbon dioxide and Ethylene oxide mixture, with more than 87% Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?id=id2592&mnid=mnid2934">119P</a></td><td class="tihgreen align-center">3300</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2592"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Carbon dioxide and Ethylene oxide mixture, with more than 87% Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?poly=y&id=id2592&mnid=mnid2934">119P</a></td><td class="tihgreen align-center">3300</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2592"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Carbon dioxide and Ethylene oxide mixtures, with more than 6% Ethylene oxide</td><td class="align-center"><a href="./guide115.html?id=id61&mnid=mnid63">115</a></td><td class="align-center">1041</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1715,7 +1707,7 @@
 			</tr><tr>
 				<td class="align-left">Chlorodinitrobenzenes, solid</td><td class="align-center"><a href="./guide153.html?id=id2795&mnid=mnid3208">153</a></td><td class="align-center">3441</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">1-Chloro-2,3-epoxypropane</td><td class="align-center"><a href="./guide131.html?id=id1241&mnid=mnid1354">131P</a></td><td class="align-center">2023</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">1-Chloro-2,3-epoxypropane</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1241&mnid=mnid1354">131P</a></td><td class="align-center">2023</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">2-Chloroethanal</td><td class="tihgreen align-center"><a href="./guide153.html?id=id1367&mnid=mnid1488">153</a></td><td class="tihgreen align-center">2232</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1367"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
@@ -1789,7 +1781,7 @@
 			</tr><tr>
 				<td class="align-left">Chloroplatinic acid, solid</td><td class="align-center"><a href="./guide154.html?id=id1672&mnid=mnid1812">154</a></td><td class="align-center">2507</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Chloroprene, stabilized</td><td class="align-center"><a href="./guide131.html?id=id1202&mnid=mnid1312">131P</a></td><td class="align-center">1991</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Chloroprene, stabilized</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1202&mnid=mnid1312">131P</a></td><td class="align-center">1991</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">1-Chloropropane</td><td class="align-center"><a href="./guide129.html?id=id315&mnid=mnid332">129</a></td><td class="align-center">1278</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -1797,7 +1789,7 @@
 			</tr><tr>
 				<td class="align-left">3-Chloropropanol-1</td><td class="align-center"><a href="./guide153.html?id=id2066&mnid=mnid2273">153</a></td><td class="align-center">2849</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">2-Chloropropene</td><td class="align-center"><a href="./guide130.html?id=id1621&mnid=mnid1756">130P</a></td><td class="align-center">2456</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">2-Chloropropene</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1621&mnid=mnid1756">130P</a></td><td class="align-center">2456</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">2-Chloropropionic acid</td><td class="align-center"><a href="./guide153.html?id=id1675&mnid=mnid1816">153</a></td><td class="align-center">2511</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2169,9 +2161,9 @@
 			</tr><tr>
 				<td class="align-left">Cresylic acid</td><td class="align-center"><a href="./guide153.html?id=id1240&mnid=mnid1353">153</a></td><td class="align-center">2022</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Crotonaldehyde</td><td class="tihgreen align-center"><a href="./guide131.html?id=id175&mnid=mnid184">131P</a></td><td class="tihgreen align-center">1143</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id175"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Crotonaldehyde</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id175&mnid=mnid184">131P</a></td><td class="tihgreen align-center">1143</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id175"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="tihgreen align-left">Crotonaldehyde, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id175&mnid=mnid183">131P</a></td><td class="tihgreen align-center">1143</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id175"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Crotonaldehyde, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id175&mnid=mnid183">131P</a></td><td class="tihgreen align-center">1143</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id175"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Crotonic acid</td><td class="align-center"><a href="./guide153.html?id=id2040&mnid=mnid2244">153</a></td><td class="align-center">2823</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2241,9 +2233,9 @@
 			</tr><tr>
 				<td class="align-left">Cyclooctadiene phosphines</td><td class="align-center"><a href="./guide135.html?id=id2172&mnid=mnid2404">135</a></td><td class="align-center">2940</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Cyclooctadienes</td><td class="align-center"><a href="./guide130.html?id=id1688&mnid=mnid1829">130P</a></td><td class="align-center">2520</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Cyclooctadienes</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1688&mnid=mnid1829">130P</a></td><td class="align-center">2520</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Cyclooctatetraene</td><td class="align-center"><a href="./guide128.html?id=id1508&mnid=mnid1638">128P</a></td><td class="align-center">2358</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Cyclooctatetraene</td><td class="align-center"><a href="./guide128.html?poly=y&id=id1508&mnid=mnid1638">128P</a></td><td class="align-center">2358</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Cyclopentane</td><td class="align-center"><a href="./guide128.html?id=id178&mnid=mnid187">128</a></td><td class="align-center">1146</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2289,7 +2281,7 @@
 			</tr><tr>
 				<td class="align-left">Diallylamine</td><td class="align-center"><a href="./guide132.html?id=id1509&mnid=mnid1639">132</a></td><td class="align-center">2359</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Diallyl ether</td><td class="align-center"><a href="./guide131.html?id=id1510&mnid=mnid1640">131P</a></td><td class="align-center">2360</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Diallyl ether</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1510&mnid=mnid1640">131P</a></td><td class="align-center">2360</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">4,4&#39;-Diaminodiphenylmethane</td><td class="align-center"><a href="./guide153.html?id=id1810&mnid=mnid1965">153</a></td><td class="align-center">2651</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2347,9 +2339,9 @@
 			</tr><tr>
 				<td class="align-left">1,1-Dichloroethane</td><td class="align-center"><a href="./guide130.html?id=id1512&mnid=mnid1642">130</a></td><td class="align-center">2362</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">1,2-Dichloroethylene</td><td class="align-center"><a href="./guide130.html?id=id183&mnid=mnid192">130P</a></td><td class="align-center">1150</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">1,2-Dichloroethylene</td><td class="align-center"><a href="./guide130.html?poly=y&id=id183&mnid=mnid192">130P</a></td><td class="align-center">1150</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Dichloroethylene</td><td class="align-center"><a href="./guide130.html?id=id184&mnid=mnid193">130P</a></td><td class="align-center">1150</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Dichloroethylene</td><td class="align-center"><a href="./guide130.html?poly=y&id=id184&mnid=mnid193">130P</a></td><td class="align-center">1150</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Dichloroethyl ether</td><td class="align-center"><a href="./guide152.html?id=id1071&mnid=mnid1154">152</a></td><td class="align-center">1916</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2451,7 +2443,7 @@
 			</tr><tr>
 				<td class="align-left">Difluoroethane and Dichlorodifluoromethane azeotropic mixture with approximately 74% Dichlorodifluoromethane</td><td class="align-center"><a href="./guide126.html?id=id1769&mnid=mnid1924">126</a></td><td class="align-center">2602</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">1,1-Difluoroethylene</td><td class="align-center"><a href="./guide116.html?id=id1130&mnid=mnid1234">116P</a></td><td class="align-center">1959</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">1,1-Difluoroethylene</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1130&mnid=mnid1234">116P</a></td><td class="align-center">1959</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Difluoromethane</td><td class="align-center"><a href="./guide115.html?id=id2518&mnid=mnid2838">115</a></td><td class="align-center">3252</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2471,7 +2463,7 @@
 			</tr><tr>
 				<td class="align-left">Diisopropyl ether</td><td class="align-center"><a href="./guide127.html?id=id193&mnid=mnid202">127</a></td><td class="align-center">1159</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Diketene, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id1689&mnid=mnid1830">131P</a></td><td class="tihgreen align-center">2521</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1689"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Diketene, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id1689&mnid=mnid1830">131P</a></td><td class="tihgreen align-center">2521</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1689"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">1,1-Dimethoxyethane</td><td class="align-center"><a href="./guide127.html?id=id1528&mnid=mnid1659">127</a></td><td class="align-center">2377</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2489,9 +2481,9 @@
 			</tr><tr>
 				<td class="align-left">2-Dimethylaminoethyl acrylate</td><td class="align-center"><a href="./guide152.html?id=id2595&mnid=mnid2937">152</a></td><td class="align-center">3302</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">2-Dimethylaminoethyl methacrylate</td><td class="align-center"><a href="./guide153.html?id=id1690&mnid=mnid1831">153P</a></td><td class="align-center">2522</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">2-Dimethylaminoethyl methacrylate</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1690&mnid=mnid1831">153P</a></td><td class="align-center">2522</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Dimethylaminoethyl methacrylate</td><td class="align-center"><a href="./guide153.html?id=id1691&mnid=mnid1832">153P</a></td><td class="align-center">2522</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Dimethylaminoethyl methacrylate</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1691&mnid=mnid1832">153P</a></td><td class="align-center">2522</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">N,N-Dimethylaniline</td><td class="align-center"><a href="./guide153.html?id=id1393&mnid=mnid1515">153</a></td><td class="align-center">2253</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2659,7 +2651,7 @@
 			</tr><tr>
 				<td class="align-left">Dithiocarbamate pesticide, solid, toxic</td><td class="align-center"><a href="./guide151.html?id=id1946&mnid=mnid2123">151</a></td><td class="align-center">2771</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Divinyl ether, stabilized</td><td class="align-center"><a href="./guide128.html?id=id203&mnid=mnid213">128P</a></td><td class="align-center">1167</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Divinyl ether, stabilized</td><td class="align-center"><a href="./guide128.html?poly=y&id=id203&mnid=mnid213">128P</a></td><td class="align-center">1167</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">DM</td><td class="tihgreen align-center"><a href="./guide154.html?id=id796&mnid=mnid848">154</a></td><td class="tihgreen align-center">1698</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html"><img class="image-actual" src="img/chemical.gif" alt="Chemical Warfare Agent image" title="Chemical Warfare Agent"/></a></td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
@@ -2719,7 +2711,7 @@
 			</tr><tr>
 				<td class="align-left">Epibromohydrin</td><td class="align-center"><a href="./guide131.html?id=id1725&mnid=mnid1866">131</a></td><td class="align-center">2558</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Epichlorohydrin</td><td class="align-center"><a href="./guide131.html?id=id1242&mnid=mnid1355">131P</a></td><td class="align-center">2023</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Epichlorohydrin</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1242&mnid=mnid1355">131P</a></td><td class="align-center">2023</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">1,2-Epoxy-3-ethoxypropane</td><td class="align-center"><a href="./guide127.html?id=id1924&mnid=mnid2086">127</a></td><td class="align-center">2752</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2751,9 +2743,9 @@
 			</tr><tr>
 				<td class="align-left">Ethyl acetate</td><td class="align-center"><a href="./guide129.html?id=id211&mnid=mnid221">129</a></td><td class="align-center">1173</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethylacetylene, stabilized</td><td class="align-center"><a href="./guide116.html?id=id1615&mnid=mnid1750">116P</a></td><td class="align-center">2452</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethylacetylene, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1615&mnid=mnid1750">116P</a></td><td class="align-center">2452</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1072&mnid=mnid1155">129P</a></td><td class="align-center">1917</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1072&mnid=mnid1155">129P</a></td><td class="align-center">1917</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Ethyl alcohol</td><td class="align-center"><a href="./guide127.html?id=id207&mnid=mnid217">127</a></td><td class="align-center">1170</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2815,11 +2807,11 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Ethyldichlorosilane</td><td class="tihgreen align-center"><a href="./guide139.html?id=id221&mnid=mnid231">139</a></td><td class="tihgreen align-center">1183</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id221"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethylene</td><td class="align-center"><a href="./guide116.html?id=id1136&mnid=mnid1240">116P</a></td><td class="align-center">1962</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethylene</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1136&mnid=mnid1240">116P</a></td><td class="align-center">1962</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Ethylene, Acetylene and Propylene in mixture, refrigerated liquid containing at least 71.5% Ethylene with not more than 22.5% Acetylene and not more than 6% Propylene.</td><td class="align-center"><a href="./guide115.html?id=id2373&mnid=mnid3641">115</a></td><td class="align-center">3138</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethylene, compressed</td><td class="align-center"><a href="./guide116.html?id=id1137&mnid=mnid1241">116P</a></td><td class="align-center">1962</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethylene, compressed</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1137&mnid=mnid1241">116P</a></td><td class="align-center">1962</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Ethylene, refrigerated liquid  (cryogenic liquid)</td><td class="align-center"><a href="./guide115.html?id=id56&mnid=mnid57">115</a></td><td class="align-center">1038</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2843,13 +2835,13 @@
 			</tr><tr>
 				<td class="align-left">Ethylene glycol monomethyl ether acetate</td><td class="align-center"><a href="./guide129.html?id=id225&mnid=mnid235">129</a></td><td class="align-center">1189</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Ethyleneimine, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id223&mnid=mnid233">131P</a></td><td class="tihgreen align-center">1185</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id223"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Ethyleneimine, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id223&mnid=mnid233">131P</a></td><td class="tihgreen align-center">1185</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id223"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="tihgreen align-left">Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?id=id58&mnid=mnid60">119P</a></td><td class="tihgreen align-center">1040</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id58"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?poly=y&id=id58&mnid=mnid60">119P</a></td><td class="tihgreen align-center">1040</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id58"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Ethylene oxide and Carbon dioxide mixture, with more than 9% but not more than 87% Ethylene oxide</td><td class="align-center"><a href="./guide115.html?id=id62&mnid=mnid64">115</a></td><td class="align-center">1041</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Ethylene oxide and Carbon dioxide mixture, with more than 87% Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?id=id2593&mnid=mnid2935">119P</a></td><td class="tihgreen align-center">3300</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2593"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Ethylene oxide and Carbon dioxide mixture, with more than 87% Ethylene oxide</td><td class="tihgreen align-center"><a href="./guide119.html?poly=y&id=id2593&mnid=mnid2935">119P</a></td><td class="tihgreen align-center">3300</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2593"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Ethylene oxide and Carbon dioxide mixtures, with more than 6 % Ethylene oxide</td><td class="align-center"><a href="./guide115.html?id=id63&mnid=mnid65">115</a></td><td class="align-center">1041</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2865,11 +2857,11 @@
 			</tr><tr>
 				<td class="align-left">Ethylene oxide and Pentafluoroethane mixture, with not more than 7.9% Ethylene oxide</td><td class="align-center"><a href="./guide126.html?id=id2590&mnid=mnid2930">126</a></td><td class="align-center">3298</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethylene oxide and Propylene oxide mixture, with not more than 30% Ethylene oxide</td><td class="align-center"><a href="./guide129.html?id=id2203&mnid=mnid2437">129P</a></td><td class="align-center">2983</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethylene oxide and Propylene oxide mixture, with not more than 30% Ethylene oxide</td><td class="align-center"><a href="./guide129.html?poly=y&id=id2203&mnid=mnid2437">129P</a></td><td class="align-center">2983</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Ethylene oxide and Tetrafluoroethane mixture, with not more than 5.6% Ethylene oxide</td><td class="align-center"><a href="./guide126.html?id=id2591&mnid=mnid2933">126</a></td><td class="align-center">3299</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Ethylene oxide with Nitrogen</td><td class="tihgreen align-center"><a href="./guide119.html?id=id59&mnid=mnid61">119P</a></td><td class="tihgreen align-center">1040</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id59"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Ethylene oxide with Nitrogen</td><td class="tihgreen align-center"><a href="./guide119.html?poly=y&id=id59&mnid=mnid61">119P</a></td><td class="tihgreen align-center">1040</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id59"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Ethyl ether</td><td class="align-center"><a href="./guide127.html?id=id189&mnid=mnid198">127</a></td><td class="align-center">1155</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -2891,9 +2883,9 @@
 			</tr><tr>
 				<td class="align-left">Ethyl mercaptan</td><td class="align-center"><a href="./guide129.html?id=id1513&mnid=mnid1643">129</a></td><td class="align-center">2363</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethyl methacrylate</td><td class="align-center"><a href="./guide130.html?id=id1419&mnid=mnid1541">130P</a></td><td class="align-center">2277</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethyl methacrylate</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1419&mnid=mnid1541">130P</a></td><td class="align-center">2277</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Ethyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?id=id1420&mnid=mnid1542">130P</a></td><td class="align-center">2277</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Ethyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1420&mnid=mnid1542">130P</a></td><td class="align-center">2277</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Ethyl methyl ether</td><td class="align-center"><a href="./guide115.html?id=id57&mnid=mnid58">115</a></td><td class="align-center">1039</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -3133,13 +3125,13 @@
 			</tr><tr>
 				<td class="align-left">Fumigated unit</td><td class="align-center"><a href="./guide171.html?id=id2701&mnid=mnid3100">171</a></td><td class="align-center">3359</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Furaldehydes</td><td class="align-center"><a href="./guide132.html?id=id238&mnid=mnid250">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Furaldehydes</td><td class="align-center"><a href="./guide132.html?poly=y&id=id238&mnid=mnid250">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Furan</td><td class="align-center"><a href="./guide128.html?id=id1542&mnid=mnid1674">128</a></td><td class="align-center">2389</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Furfural</td><td class="align-center"><a href="./guide132.html?id=id239&mnid=mnid251">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Furfural</td><td class="align-center"><a href="./guide132.html?poly=y&id=id239&mnid=mnid251">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Furfuraldehydes</td><td class="align-center"><a href="./guide132.html?id=id238&mnid=mnid249">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Furfuraldehydes</td><td class="align-center"><a href="./guide132.html?poly=y&id=id238&mnid=mnid249">132P</a></td><td class="align-center">1199</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Furfuryl alcohol</td><td class="align-center"><a href="./guide153.html?id=id2093&mnid=mnid2303">153</a></td><td class="align-center">2874</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -3195,7 +3187,7 @@
 			</tr><tr>
 				<td class="align-left">Glycerol alpha-monochlorohydrin</td><td class="align-center"><a href="./guide153.html?id=id1858&mnid=mnid2017">153</a></td><td class="align-center">2689</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Glycidaldehyde</td><td class="align-center"><a href="./guide131.html?id=id1791&mnid=mnid1946">131P</a></td><td class="align-center">2622</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Glycidaldehyde</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1791&mnid=mnid1946">131P</a></td><td class="align-center">2622</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Guanidine nitrate</td><td class="align-center"><a href="./guide143.html?id=id539&mnid=mnid575">143</a></td><td class="align-center">1467</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -3507,7 +3499,7 @@
 			</tr><tr>
 				<td class="align-left">Isobutyl acetate</td><td class="align-center"><a href="./guide129.html?id=id258&mnid=mnid272">129</a></td><td class="align-center">1213</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Isobutyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1695&mnid=mnid1836">129P</a></td><td class="align-center">2527</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Isobutyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1695&mnid=mnid1836">129P</a></td><td class="align-center">2527</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Isobutyl alcohol</td><td class="align-center"><a href="./guide129.html?id=id257&mnid=mnid271">129</a></td><td class="align-center">1212</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -3527,7 +3519,7 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Isobutyl isocyanate</td><td class="tihgreen align-center"><a href="./guide155.html?id=id1654&mnid=mnid1791">155</a></td><td class="tihgreen align-center">2486</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1654"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="align-left">Isobutyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?id=id1426&mnid=mnid1548">130P</a></td><td class="align-center">2283</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Isobutyl methacrylate, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1426&mnid=mnid1548">130P</a></td><td class="align-center">2283</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Isobutyl propionate</td><td class="align-center"><a href="./guide129.html?id=id1547&mnid=mnid1679">129</a></td><td class="align-center">2394</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -3593,11 +3585,11 @@
 			</tr><tr>
 				<td class="align-left">Isophorone diisocyanate</td><td class="align-center"><a href="./guide156.html?id=id1434&mnid=mnid1556">156</a></td><td class="align-center">2290</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Isoprene, stabilized</td><td class="align-center"><a href="./guide130.html?id=id261&mnid=mnid275">130P</a></td><td class="align-center">1218</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Isoprene, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id261&mnid=mnid275">130P</a></td><td class="align-center">1218</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Isopropanol</td><td class="align-center"><a href="./guide129.html?id=id262&mnid=mnid276">129</a></td><td class="align-center">1219</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Isopropenyl acetate</td><td class="align-center"><a href="./guide129.html?id=id1556&mnid=mnid1688">129P</a></td><td class="align-center">2403</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Isopropenyl acetate</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1556&mnid=mnid1688">129P</a></td><td class="align-center">2403</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Isopropenylbenzene</td><td class="align-center"><a href="./guide128.html?id=id1446&mnid=mnid1568">128</a></td><td class="align-center">2303</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4115,11 +4107,11 @@
 			</tr><tr>
 				<td class="align-left">Metal salts of organic compounds, flammable, n.o.s.</td><td class="align-center"><a href="./guide133.html?id=id2449&mnid=mnid2759">133</a></td><td class="align-center">3181</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Methacrylaldehyde, stabilized</td><td class="align-center"><a href="./guide131.html?id=id1549&mnid=mnid1681">131P</a></td><td class="align-center">2396</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methacrylaldehyde, stabilized</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1549&mnid=mnid1681">131P</a></td><td class="align-center">2396</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Methacrylic acid, stabilized</td><td class="align-center"><a href="./guide153.html?id=id1699&mnid=mnid1840">153P</a></td><td class="align-center">2531</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methacrylic acid, stabilized</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1699&mnid=mnid1840">153P</a></td><td class="align-center">2531</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Methacrylonitrile, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id2295&mnid=mnid2568">131P</a></td><td class="tihgreen align-center">3079</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2295"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Methacrylonitrile, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id2295&mnid=mnid2568">131P</a></td><td class="tihgreen align-center">3079</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2295"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">Methallyl alcohol</td><td class="align-center"><a href="./guide129.html?id=id1783&mnid=mnid1938">129</a></td><td class="align-center">2614</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4145,15 +4137,15 @@
 			</tr><tr>
 				<td class="align-left">Methyl acetate</td><td class="align-center"><a href="./guide129.html?id=id275&mnid=mnid291">129</a></td><td class="align-center">1231</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Methylacetylene and Propadiene mixture, stabilized</td><td class="align-center"><a href="./guide116.html?id=id87&mnid=mnid90">116P</a></td><td class="align-center">1060</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methylacetylene and Propadiene mixture, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id87&mnid=mnid90">116P</a></td><td class="align-center">1060</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Methyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?id=id1075&mnid=mnid1158">129P</a></td><td class="align-center">1919</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methyl acrylate, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id1075&mnid=mnid1158">129P</a></td><td class="align-center">1919</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Methylal</td><td class="align-center"><a href="./guide127.html?id=id277&mnid=mnid293">127</a></td><td class="align-center">1234</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Methyl alcohol</td><td class="align-center"><a href="./guide131.html?id=id274&mnid=mnid290">131</a></td><td class="align-center">1230</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Methylallyl chloride</td><td class="align-center"><a href="./guide130.html?id=id1715&mnid=mnid1856">130P</a></td><td class="align-center">2554</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methylallyl chloride</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1715&mnid=mnid1856">130P</a></td><td class="align-center">2554</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Methylamine, anhydrous</td><td class="align-center"><a href="./guide118.html?id=id89&mnid=mnid92">118</a></td><td class="align-center">1061</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4261,7 +4253,7 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Methyl isocyanate</td><td class="tihgreen align-center"><a href="./guide155.html?id=id1648&mnid=mnid1785">155</a></td><td class="tihgreen align-center">2480</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1648"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="align-left">Methyl isopropenyl ketone, stabilized</td><td class="align-center"><a href="./guide127.html?id=id286&mnid=mnid302">127P</a></td><td class="align-center">1246</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methyl isopropenyl ketone, stabilized</td><td class="align-center"><a href="./guide127.html?poly=y&id=id286&mnid=mnid302">127P</a></td><td class="align-center">1246</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">Methyl isothiocyanate</td><td class="tihgreen align-center"><a href="./guide131.html?id=id1643&mnid=mnid1778">131</a></td><td class="tihgreen align-center">2477</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id1643"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
@@ -4271,7 +4263,7 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Methyl mercaptan</td><td class="tihgreen align-center"><a href="./guide117.html?id=id93&mnid=mnid96">117</a></td><td class="tihgreen align-center">1064</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id93"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="align-left">Methyl methacrylate monomer, stabilized</td><td class="align-center"><a href="./guide129.html?id=id287&mnid=mnid303">129P</a></td><td class="align-center">1247</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Methyl methacrylate monomer, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id287&mnid=mnid303">129P</a></td><td class="align-center">1247</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">4-Methylmorpholine</td><td class="align-center"><a href="./guide132.html?id=id1702&mnid=mnid1843">132</a></td><td class="align-center">2535</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4311,7 +4303,7 @@
 			</tr><tr>
 				<td class="align-left">Methyl valeraldehyde (alpha)</td><td class="align-center"><a href="./guide130.html?id=id1517&mnid=mnid1647">130</a></td><td class="align-center">2367</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Methyl vinyl ketone, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?id=id291&mnid=mnid307">131P</a></td><td class="tihgreen align-center">1251</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id291"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Methyl vinyl ketone, stabilized</td><td class="tihgreen align-center"><a href="./guide131.html?poly=y&id=id291&mnid=mnid307">131P</a></td><td class="tihgreen align-center">1251</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id291"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">M.I.B.C.</td><td class="align-center"><a href="./guide129.html?id=id1282&mnid=mnid1395">129</a></td><td class="align-center">2053</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4653,11 +4645,11 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Nonyltrichlorosilane</td><td class="tihgreen align-center"><a href="./guide156.html?id=id939&mnid=mnid1002">156</a></td><td class="tihgreen align-center">1799</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id939"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">2,5-Norbornadiene, stabilized</td><td class="align-center"><a href="./guide128.html?id=id1391&mnid=mnid1513">128P</a></td><td class="align-center">2251</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">2,5-Norbornadiene, stabilized</td><td class="align-center"><a href="./guide128.html?poly=y&id=id1391&mnid=mnid1513">128P</a></td><td class="align-center">2251</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">Octadecyltrichlorosilane</td><td class="tihgreen align-center"><a href="./guide156.html?id=id940&mnid=mnid1003">156</a></td><td class="tihgreen align-center">1800</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id940"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Octadiene</td><td class="align-center"><a href="./guide128.html?id=id1455&mnid=mnid1581">128P</a></td><td class="align-center">2309</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Octadiene</td><td class="align-center"><a href="./guide128.html?poly=y&id=id1455&mnid=mnid1581">128P</a></td><td class="align-center">2309</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Octafluorobut-2-ene</td><td class="align-center"><a href="./guide126.html?id=id1575&mnid=mnid1708">126</a></td><td class="align-center">2422</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -4961,7 +4953,7 @@
 			</tr><tr>
 				<td class="align-left">1-Pentene</td><td class="align-center"><a href="./guide128.html?id=id150&mnid=mnid155">128</a></td><td class="align-center">1108</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">1-Pentol</td><td class="align-center"><a href="./guide153.html?id=id1866&mnid=mnid2027">153P</a></td><td class="align-center">2705</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">1-Pentol</td><td class="align-center"><a href="./guide153.html?poly=y&id=id1866&mnid=mnid2027">153P</a></td><td class="align-center">2705</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Perchlorates, inorganic, aqueous solution, n.o.s.</td><td class="align-center"><a href="./guide140.html?id=id2475&mnid=mnid2789">140</a></td><td class="align-center">3211</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -5483,9 +5475,9 @@
 			</tr><tr>
 				<td class="align-left">Printing ink related material</td><td class="align-center"><a href="./guide129.html?id=id255&mnid=mnid269">129</a></td><td class="align-center">1210</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Propadiene, stabilized</td><td class="align-center"><a href="./guide116.html?id=id1330&mnid=mnid1445">116P</a></td><td class="align-center">2200</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Propadiene, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1330&mnid=mnid1445">116P</a></td><td class="align-center">2200</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Propadiene and Methylacetylene mixture, stabilized</td><td class="align-center"><a href="./guide116.html?id=id88&mnid=mnid91">116P</a></td><td class="align-center">1060</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Propadiene and Methylacetylene mixture, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id88&mnid=mnid91">116P</a></td><td class="align-center">1060</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Propane</td><td class="align-center"><a href="./guide115.html?id=id117&mnid=mnid120">115</a></td><td class="align-center">1075</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -5543,11 +5535,11 @@
 			</tr><tr>
 				<td class="align-left">Propylene dichloride</td><td class="align-center"><a href="./guide130.html?id=id319&mnid=mnid336">130</a></td><td class="align-center">1279</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Propyleneimine, stabilized</td><td class="align-center"><a href="./guide131.html?id=id1077&mnid=mnid1160">131P</a></td><td class="align-center">1921</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Propyleneimine, stabilized</td><td class="align-center"><a href="./guide131.html?poly=y&id=id1077&mnid=mnid1160">131P</a></td><td class="align-center">1921</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Propylene oxide</td><td class="align-center"><a href="./guide127.html?id=id320&mnid=mnid337">127P</a></td><td class="align-center">1280</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Propylene oxide</td><td class="align-center"><a href="./guide127.html?poly=y&id=id320&mnid=mnid337">127P</a></td><td class="align-center">1280</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Propylene oxide and Ethylene oxide mixture, with not more than 30% Ethylene oxide</td><td class="align-center"><a href="./guide129.html?id=id2204&mnid=mnid2438">129P</a></td><td class="align-center">2983</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Propylene oxide and Ethylene oxide mixture, with not more than 30% Ethylene oxide</td><td class="align-center"><a href="./guide129.html?poly=y&id=id2204&mnid=mnid2438">129P</a></td><td class="align-center">2983</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Propylene tetramer</td><td class="align-center"><a href="./guide128.html?id=id2067&mnid=mnid2274">128</a></td><td class="align-center">2850</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -5767,7 +5759,7 @@
 			</tr><tr>
 				<td class="align-left">Refrigerant gas R-503 (azeotropic mixture of Refrigerant gas R-13 and Refrigerant gas R-23 with approximately 60% Refrigerant gas R-13)</td><td class="align-center"><a href="./guide126.html?id=id1761&mnid=mnid1916">126</a></td><td class="align-center">2599</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Refrigerant gas R-1132a</td><td class="align-center"><a href="./guide116.html?id=id1131&mnid=mnid1235">116P</a></td><td class="align-center">1959</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Refrigerant gas R-1132a</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1131&mnid=mnid1235">116P</a></td><td class="align-center">1959</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Refrigerant gas R-1216</td><td class="align-center"><a href="./guide126.html?id=id1022&mnid=mnid1104">126</a></td><td class="align-center">1858</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -6167,7 +6159,7 @@
 			</tr><tr>
 				<td class="align-left">Strychnine salts</td><td class="align-center"><a href="./guide151.html?id=id781&mnid=mnid833">151</a></td><td class="align-center">1692</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Styrene monomer, stabilized</td><td class="align-center"><a href="./guide128.html?id=id1284&mnid=mnid1397">128P</a></td><td class="align-center">2055</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Styrene monomer, stabilized</td><td class="align-center"><a href="./guide128.html?poly=y&id=id1284&mnid=mnid1397">128P</a></td><td class="align-center">2055</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Substituted nitrophenol pesticide, liquid, flammable, poisonous</td><td class="align-center"><a href="./guide131.html?id=id1957&mnid=mnid2145">131</a></td><td class="align-center">2780</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -6309,7 +6301,7 @@
 			</tr><tr>
 				<td class="align-left">Tetrafluoroethane and Ethylene oxide mixture, with not more than 5.6% Ethylene oxide</td><td class="align-center"><a href="./guide126.html?id=id2591&mnid=mnid2932">126</a></td><td class="align-center">3299</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Tetrafluoroethylene, stabilized</td><td class="align-center"><a href="./guide116.html?id=id129&mnid=mnid134">116P</a></td><td class="align-center">1081</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Tetrafluoroethylene, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id129&mnid=mnid134">116P</a></td><td class="align-center">1081</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Tetrafluoromethane</td><td class="align-center"><a href="./guide126.html?id=id1185&mnid=mnid1291">126</a></td><td class="align-center">1982</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -6633,7 +6625,7 @@
 			</tr><tr>
 				<td class="tihgreen align-left">Trifluoroacetyl chloride</td><td class="tihgreen align-center"><a href="./guide125.html?id=id2277&mnid=mnid2548">125</a></td><td class="tihgreen align-center">3057</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id2277"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
-				<td class="tihgreen align-left">Trifluorochloroethylene, stabilized</td><td class="tihgreen align-center"><a href="./guide119.html?id=id130&mnid=mnid135">119P</a></td><td class="tihgreen align-center">1082</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id130"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
+				<td class="tihgreen align-left">Trifluorochloroethylene, stabilized</td><td class="tihgreen align-center"><a href="./guide119.html?poly=y&id=id130&mnid=mnid135">119P</a></td><td class="tihgreen align-center">1082</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id130"><img class="image-actual" src="img/tih2.gif" alt="TIH image" title="Toxic Inhalation Hazard"/></a></td>
 			</tr><tr>
 				<td class="align-left">1,1,1-Trifluoroethane</td><td class="align-center"><a href="./guide115.html?id=id1260&mnid=mnid1373">115</a></td><td class="align-center">2035</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
@@ -6751,33 +6743,33 @@
 			</tr><tr>
 				<td class="align-left">Vehicle, fuel cell, flammable liquid powered</td><td class="align-center"><a href="./guide128.html?id=id2427&mnid=mnid3640">128</a></td><td class="align-center">3166</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl acetate, stabilized</td><td class="align-center"><a href="./guide129.html?id=id337&mnid=mnid354">129P</a></td><td class="align-center">1301</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl acetate, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id337&mnid=mnid354">129P</a></td><td class="align-center">1301</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl bromide, stabilized</td><td class="align-center"><a href="./guide116.html?id=id132&mnid=mnid137">116P</a></td><td class="align-center">1085</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl bromide, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id132&mnid=mnid137">116P</a></td><td class="align-center">1085</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl butyrate, stabilized</td><td class="align-center"><a href="./guide129.html?id=id2054&mnid=mnid2261">129P</a></td><td class="align-center">2838</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl butyrate, stabilized</td><td class="align-center"><a href="./guide129.html?poly=y&id=id2054&mnid=mnid2261">129P</a></td><td class="align-center">2838</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl chloride, stabilized</td><td class="align-center"><a href="./guide116.html?id=id133&mnid=mnid138">116P</a></td><td class="align-center">1086</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl chloride, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id133&mnid=mnid138">116P</a></td><td class="align-center">1086</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="align-left">Vinyl chloroacetate</td><td class="align-center"><a href="./guide155.html?id=id1755&mnid=mnid1909">155</a></td><td class="align-center">2589</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl ethyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?id=id338&mnid=mnid355">127P</a></td><td class="align-center">1302</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl ethyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?poly=y&id=id338&mnid=mnid355">127P</a></td><td class="align-center">1302</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl fluoride, stabilized</td><td class="align-center"><a href="./guide116.html?id=id1025&mnid=mnid1107">116P</a></td><td class="align-center">1860</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl fluoride, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id1025&mnid=mnid1107">116P</a></td><td class="align-center">1860</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinylidene chloride, stabilized</td><td class="align-center"><a href="./guide130.html?id=id339&mnid=mnid356">130P</a></td><td class="align-center">1303</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinylidene chloride, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id339&mnid=mnid356">130P</a></td><td class="align-center">1303</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl isobutyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?id=id340&mnid=mnid357">127P</a></td><td class="align-center">1304</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl isobutyl ether, stabilized</td><td class="align-center"><a href="./guide127.html?poly=y&id=id340&mnid=mnid357">127P</a></td><td class="align-center">1304</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyl methyl ether, stabilized</td><td class="align-center"><a href="./guide116.html?id=id134&mnid=mnid139">116P</a></td><td class="align-center">1087</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyl methyl ether, stabilized</td><td class="align-center"><a href="./guide116.html?poly=y&id=id134&mnid=mnid139">116P</a></td><td class="align-center">1087</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinylpyridines, stabilized</td><td class="align-center"><a href="./guide131.html?id=id2289&mnid=mnid2562">131P</a></td><td class="align-center">3073</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinylpyridines, stabilized</td><td class="align-center"><a href="./guide131.html?poly=y&id=id2289&mnid=mnid2562">131P</a></td><td class="align-center">3073</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="align-left">Vinyltoluenes, stabilized</td><td class="align-center"><a href="./guide130.html?id=id1787&mnid=mnid1942">130P</a></td><td class="align-center">2618</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
+				<td class="align-left">Vinyltoluenes, stabilized</td><td class="align-center"><a href="./guide130.html?poly=y&id=id1787&mnid=mnid1942">130P</a></td><td class="align-center">2618</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td><td class="align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Vinyltrichlorosilane</td><td class="tihgreen align-center"><a href="./guide155.html?id=id341&mnid=mnid358">155P</a></td><td class="tihgreen align-center">1305</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id341"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
+				<td class="tihgreen align-left">Vinyltrichlorosilane</td><td class="tihgreen align-center"><a href="./guide155.html?poly=y&id=id341&mnid=mnid358">155P</a></td><td class="tihgreen align-center">1305</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id341"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
-				<td class="tihgreen align-left">Vinyltrichlorosilane, stabilized</td><td class="tihgreen align-center"><a href="./guide155.html?id=id342&mnid=mnid359">155P</a></td><td class="tihgreen align-center">1305</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id342"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
+				<td class="tihgreen align-left">Vinyltrichlorosilane, stabilized</td><td class="tihgreen align-center"><a href="./guide155.html?poly=y&id=id342&mnid=mnid359">155P</a></td><td class="tihgreen align-center">1305</td><td class="tihgreen align-center"><a href="./greenintro.html?id=id342"><img class="image-actual" src="img/water.gif" alt="Water Reactive Material image" title="Water Reactive Material"/></a></td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
 				<td class="tihgreen align-left">VX</td><td class="tihgreen align-center"><a href="./guide153.html?id=id2024&mnid=mnid2226">153</a></td><td class="tihgreen align-center">2810</td><td class="tihgreen align-center">&nbsp;</td><td class="tihgreen align-center"><a href="./greenintro.html"><img class="image-actual" src="img/chemical.gif" alt="Chemical Warfare Agent image" title="Chemical Warfare Agent"/></a></td><td class="tihgreen align-center">&nbsp;</td>
 			</tr><tr>
